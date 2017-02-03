@@ -11,9 +11,10 @@
 </head>
 <body data-ng-controller="NoteController as cnote">
     <label>Note:</label> <br />
-    <textarea  data-ng-model="cnote.messageNote" name="messageNote" id="messageNote"></textarea> <br />
-    <input type="button" id="enregistrer" value="enregistrer" data-ng-click="cnote.save()"/>
+    <textarea  data-ng-model="cnote.messageNote" data-ng-change="cnote.info='note modifiée'" name="messageNote" id="messageNote"></textarea> <br />
+    <input type="button" id="enregistrer"  value="enregistrer" data-ng-click="cnote.save()"/>
     <input type="button" id="effacer" value="effacer" data-ng-click="cnote.clear()"/>
     <p data-ng-bind="cnote.count()">100</p>
+    <span data-ng-bind="cnote.info"></span>
 </body>
 </html>
