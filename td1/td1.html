@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>AngularJS</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
     <script src="app/noteApp.js"></script>
     <script src="app/noteController.js"></script>
     <script src="cookies"></script>
@@ -14,6 +14,6 @@
     <textarea  data-ng-model="cnote.messageNote" name="messageNote" id="messageNote"></textarea> <br />
     <input type="button" id="enregistrer" value="enregistrer" data-ng-click="cnote.save()"/>
     <input type="button" id="effacer" value="effacer" data-ng-click="cnote.clear()"/>
-    <p data-ng-change="cnote.count()"></p>
+    <p data-ng-bind="cnote.count()">100</p>
 </body>
 </html>
